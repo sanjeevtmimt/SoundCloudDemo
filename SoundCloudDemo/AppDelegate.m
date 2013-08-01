@@ -6,11 +6,19 @@
 //  Copyright (c) 2013 sanjeev kumar Gautam. All rights reserved.
 //
 
+#import "SCUI.h"
 #import "AppDelegate.h"
 
 #import "ViewController.h"
 
 @implementation AppDelegate
+
++ (void) initialize
+{
+    [SCSoundCloud setClientID:@"3975db0f9115cccb2261ac54de275bd5"
+                       secret:@"e3a73d3723682595141e5bddf256928a"
+                  redirectURL:[NSURL URLWithString:@"SoundCloudDemo://oauth"]];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
